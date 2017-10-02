@@ -1,0 +1,105 @@
+<div class="section_container">
+    <div class="title title_main">Toolbox</div>
+    
+    <div class='container_toolbox_bt'>
+        <button id="dialog-link-spybox" class="ui-button ui-corner-all ui-widget">
+            <img src='images/binoculars.png'><br>
+            Spy Box
+        </button>
+    
+        <button id="dialog-link-sender" class="ui-button ui-corner-all ui-widget">
+            <img src='images/send-mail.png'><br>
+            Sender Box
+        </button>
+        
+        <button id="dialog-link-download" class="ui-button ui-corner-all ui-widget">
+            <img src='images/downloading-action.png'><br>
+            Download FW
+        </button>
+        
+        <button id="dialog-link-calibration" class="ui-button ui-corner-all ui-widget">
+            <img src='images/settings-gears.png'><br>
+            Calibration
+        </button>
+    </div>
+    
+
+    <!-- ui-dialog spybox -->
+    <div id="dialog-spybox" title="Spy Box">
+        <div class="option_line">
+            <button class="spy_stop">Pause</button>
+            <button class="spy_play">Play</button>
+            <button class="spy_clear">Clear</button>
+        </div>
+        <div class="filter_panel">
+            <span class="text">Filter by CAN ID: </span><input class="filter_canid" type="text" value="" placeholder="000001ad" /><div class="is_different_canid"><img src="images/warning-sign.png"></div><br>
+            <span class="text">Filter by CAN DATA: </span><input class="filter_candata" type="text" value="" placeholder="000000000000" /><div class="is_different_candata"><img src="images/warning-sign.png"></div><br>
+            <div class="bt_filter">
+                <button class="launch_filter"><img src="images/check_green.png"></button>
+            </div>
+            <div class="recap_filter"></div>
+        </div>
+        <div class="head_line">
+            <span class="canid_head">CAN ID</span>
+            <span class="candata_head">CAN DATA</span>
+            <span class="number_head">COUNT</span>
+            <span class="ts_head">TIMESTAMP</span>
+        </div>
+        <div class="content_line"></div>
+    </div>
+    
+     <!-- ui-dialog sender -->
+     <div id="dialog-sender" title="Sender Box"><br>
+        <button class="add_zero">Add zeros</button>
+        <div class="presentation_sender">Type message to send:</div>
+        <div class="input_bloc_sender">
+            <div><span class="text_sender red">DLC: </span><input type="text" class="candlc_sender" value="" placeholder="08" /></div>
+            <div><span class="text_sender green">CAN ID: </span><input type="text" class="canid_sender" value="" placeholder="000001ad" /></div>
+            <div><span class="text_sender blue">CAN DATA: </span><input type="text" class="candata_sender" value="" placeholder="000000000000" /></div>
+        </div>
+        <div><button class="sender_test">Preview</button></div>
+        <div class="error_sender hidden"></div>
+        <div class="result_sender hidden">
+            <div class="reference_sender">
+                <span class="text_ref">Reference : </span><span class='red'>08</span> <span class='green'>00000228</span> <span class='blue'>01900d2500000000</span>
+            </div>
+            <div class="sender_msg"></div>
+            <div class="length_msg"></div>
+            <div><button class="sender_final">Send !</button></div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+$( "#dialog-spybox" ).dialog({
+    autoOpen: false,
+    width: 500,
+    resizable:true,
+    dialogClass: 'success-dialog'
+});
+$( "#dialog-sender" ).dialog({
+    autoOpen: false,
+    width: 400,
+    resizable:true,
+    dialogClass: 'success-dialog'
+});
+
+// Link to open the dialog
+$( "#dialog-link-spybox" ).click(function( event ) {
+	$( "#dialog-spybox" ).dialog( "open" );
+	$( "#dialog-spybox" ).addClass( "open" );
+	event.preventDefault();
+});
+$(".success-dialog .ui-dialog-titlebar-close").click(function() {
+    $( "#dialog-spybox" ).removeClass( "open" );
+});
+
+$( "#dialog-link-sender" ).click(function( event ) {
+	$( "#dialog-sender" ).dialog( "open" );
+	event.preventDefault();
+});
+
+</script>

@@ -1,0 +1,101 @@
+/* line 2, ../sass/download.scss */
+#content_download .download_tool {
+  text-align: center;
+  background: #f2f2f2;
+  padding: 10px;
+  width: 500px;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 50px;
+}
+/* line 12, ../sass/download.scss */
+#content_download .download_tool .title_download {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 16, ../sass/download.scss */
+#content_download .download_tool .content_upl {
+  text-align: left;
+  margin-top: -12px;
+}
+/* line 19, ../sass/download.scss */
+#content_download .download_tool .content_upl span {
+  color: green;
+  font-weight: bold;
+}
+/* line 24, ../sass/download.scss */
+#content_download .download_tool .start_download {
+  border: 1px solid black;
+  background: #3b73b9;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 8px;
+  width: 122px;
+  box-shadow: 1px 1px 1px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 36, ../sass/download.scss */
+#content_download .download_tool .stop_download {
+  border: 1px solid black;
+  background: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 8px;
+  width: 122px;
+  box-shadow: 1px 1px 1px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 48, ../sass/download.scss */
+#content_download .download_tool .downloading_bar_container {
+  border: 1px solid black;
+  height: 20px;
+  margin-top: 6px;
+  position: relative;
+}
+/* line 53, ../sass/download.scss */
+#content_download .download_tool .downloading_bar_container .downloading_bar {
+  background: #b9e8ff;
+  width: 0%;
+  height: 20px;
+}
+/* line 58, ../sass/download.scss */
+#content_download .download_tool .downloading_bar_container .downloading_bar_content {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 70, ../sass/download.scss */
+#content_download .get_config {
+  text-align: center;
+  background: #f2f2f2;
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: inline-block;
+  vertical-align: top;
+  height: 128px;
+}
+/* line 80, ../sass/download.scss */
+#content_download .get_config .bt_get_config {
+  margin-bottom: 10px;
+}
+/* line 83, ../sass/download.scss */
+#content_download .get_config .config_info {
+  text-align: left;
+}
+/* line 85, ../sass/download.scss */
+#content_download .get_config .config_info .text_config {
+  font-weight: bold;
+}
