@@ -8,6 +8,18 @@ $(document).ready(function(){
     var testPoppin = $("#content_pretest .test_poppin");
     var canvasJauge = $(".canvas_jauge");
     
+    
+    //remplissage des zones toolbox
+    var zone0 = $("#content_toolbox .diag_inge .zone_0");
+    var zone1 = $("#content_toolbox .diag_inge .zone_1");
+    var zone2 = $("#content_toolbox .diag_inge .zone_2");
+    var zone3 = $("#content_toolbox .diag_inge .zone_3");
+    var zone4 = $("#content_toolbox .diag_inge .zone_4");
+    var zone5 = $("#content_toolbox .diag_inge .zone_5");
+    var diagInge =  $("#content_toolbox .diag_inge");
+    var diagIngeComponent =  $("#content_toolbox .diag_inge .diag_component");
+    var canvasJaugeInge = $("#content_toolbox .canvas_jauge");
+    
     var joystickTop = $("#jauge_joystick_vertical_top .jauge_remplissage");
     var joystickBot = $("#jauge_joystick_vertical_bot .jauge_remplissage");
     var joystickLeft = $("#jauge_joystick_horizontal_left .jauge_remplissage");
@@ -160,7 +172,7 @@ $(document).ready(function(){
                     $(".head_userinfo .info .role_user").html("Repair");
                     getInfoCard("ELEGANCE", "000005ad");
                 }    
-                //Recupération du dictionnaire correspondant
+                //Recupération du dictionnaire correspondant + remplissage du tableau diagnostique
                 $.ajax({
                     url : 'php/api.php?function=get_dictionaries_by_id&param1='+family_id,
                     type : 'GET',
@@ -272,7 +284,7 @@ $(document).ready(function(){
                     $(".head_userinfo .info .role_user").html("Engineering");
                     getInfoCard("ELEGANCE", "000005ad");
                 }    
-                //Recupération du dictionnaire correspondant
+                //Recupération du dictionnaire correspondant + remplissage des zones toolbox
                 $.ajax({
                     url : 'php/api.php?function=get_dictionaries_by_id&param1='+family_id,
                     type : 'GET',
@@ -280,13 +292,36 @@ $(document).ready(function(){
                     success: function(data, statut){
                         dictionary = data;                
                         var len = data.length;
-                        lineContainer.empty();
                         for (var iter = 0; iter < len; iter++) {
-                            if(data[iter].type !== "led" && data[iter].type !== "buzzer"){
-                                lineContainer.append("<div class='line id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td'>"+data[iter].symbol_name+"</span><span class='td'>"+data[iter].type+"</span><span class='td'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><span class='td totest'>Not tested</span></div>");
-                            }else{
-                                lineContainer.append("<div class='line id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td'>"+data[iter].symbol_name+"</span><span class='td'>"+data[iter].type+"</span><span class='td'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><span class='td test_bt' data-name='"+data[iter].description+"' data-press='"+data[iter].pressed_val_freq+"' data-release='"+data[iter].released_val_freq+"' data-canid='"+data[iter].can_id+"'>TEST</span></div>");
+                            console.log(data[iter].zone);
+                            switch(data[iter].zone){                                
+                                case "0":
+                                    console.log("put in zone 0");
+                                    zone0.append("<div class='diag_component id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><div class='info_component'><span class='symbol'>"+data[iter].symbol_name+"</span><span class='type'>"+data[iter].type+"</span><span class='descri'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span></div></div>");
+                                    break;
+                                case "1":
+                                   zone1.append("<div class='diag_component id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><div class='info_component'><span class='symbol'>"+data[iter].symbol_name+"</span><span class='type'>"+data[iter].type+"</span><span class='descri'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span></div></div>");
+                                    break;
+                                case "2":
+                                    zone2.append("<div class='diag_component id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><div class='info_component'><span class='symbol'>"+data[iter].symbol_name+"</span><span class='type'>"+data[iter].type+"</span><span class='descri'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span></div></div>");
+                                    break;
+                                case "3":
+                                    zone3.append("<div class='diag_component id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><div class='info_component'><span class='symbol'>"+data[iter].symbol_name+"</span><span class='type'>"+data[iter].type+"</span><span class='descri'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span></div></div>");
+                                    break;
+                                case "4":
+                                    zone4.append("<div class='diag_component id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><div class='info_component'><span class='symbol'>"+data[iter].symbol_name+"</span><span class='type'>"+data[iter].type+"</span><span class='descri'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span></div></div>");
+                                    break;
+                                case "5":
+                                    zone5.append("<div class='diag_component id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><div class='info_component'><span class='symbol'>"+data[iter].symbol_name+"</span><span class='type'>"+data[iter].type+"</span><span class='descri'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span></div></div>");
+                                    break;
                             }
+                            
+//                            
+//                            if(data[iter].type !== "led" && data[iter].type !== "buzzer"){
+//                                lineContainer.append("<div class='line id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td'>"+data[iter].symbol_name+"</span><span class='td'>"+data[iter].type+"</span><span class='td'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><span class='td totest'>Not tested</span></div>");
+//                            }else{
+//                                lineContainer.append("<div class='line id"+data[iter].id+"' data-id='"+data[iter].id+"' data-name='"+data[iter].symbol_name+"' data-function='"+data[iter].type+"'><span class='td'>"+data[iter].symbol_name+"</span><span class='td'>"+data[iter].type+"</span><span class='td'>"+data[iter].description+"</span><span class='td press'>"+data[iter].pressed_val_freq+"</span><span class='td rel'>"+data[iter].released_val_freq+"</span><span class='td photo_piece'><img src='images/"+data[iter].photo_link+"'></span><span class='td test_bt' data-name='"+data[iter].description+"' data-press='"+data[iter].pressed_val_freq+"' data-release='"+data[iter].released_val_freq+"' data-canid='"+data[iter].can_id+"'>TEST</span></div>");
+//                            }
                         }                        
                     }
                 });        
@@ -536,7 +571,112 @@ $(document).ready(function(){
                     
                 }else{
                     console.log("not send to spy");
-                }                
+                }
+                //on parcoure le dictionnaire a chaque message et on affiche l'action correspondate dans l'interface
+                for (var nb = 0; nb < dictionary.length; nb++) {
+                    if(dictionary[nb].can_id === canId){
+                        switch(dictionary[nb].type){
+                            case "button":                        
+                                if(dictionary[nb].pressed_val_freq === canData){
+                                    console.log("green");
+                                    diagInge.find(".diag_component.id"+dictionary[nb].id).addClass("is_pressed"); 
+                                }
+                                if(dictionary[nb].released_val_freq === canData){
+                                    console.log("release");
+                                    diagInge.find(".diag_component.id"+dictionary[nb].id).removeClass("is_pressed"); 
+                                }
+                                break;                            
+                            case "joystick":           
+                                if(canData == "000000000000"){
+                                    canvasJaugeInge.addClass("zero_state");
+                                    joystickBot.css('height', '0%');
+                                    joystickTop.css('height', "100%");
+                                    joystickLeft.css('width', "100%");
+                                    joystickRight.css('width', "0%");
+                                    
+                                    joystickBot2.css('height', '0%');
+                                    joystickTop2.css('height', "100%");
+                                    joystickLeft2.css('width', "100%");
+                                    joystickRight2.css('width', "0%");
+                                    
+                                    joystickBot3.css('height', '0%');
+                                    joystickTop3.css('height', "100%");
+                                    joystickLeft3.css('width', "100%");
+                                    joystickRight3.css('width', "0%");
+                                }
+                                var joy1_horizontal = canData.substring(0,2);
+                                var joy1_vertical = canData.substring(2,4);
+                                var joy2_horizontal = canData.substring(4,6);
+                                var joy2_vertical = canData.substring(6,8);
+                                var joy3_horizontal = canData.substring(8,10);
+                                var joy3_vertical = canData.substring(10,12);
+                                
+                                if(joy1_vertical !== '00' || joy1_horizontal !== '00'){
+                                    canvasJaugeInge.removeClass("zero_state");
+                                    if(joy1_vertical !== '00'){
+                                        joy1_vertical = convertHexa(joy1_vertical);
+                                        if(joy1_vertical<0){
+                                            joystickBot.css('height', (joy1_vertical*-1)+"%");                                 
+                                        }else{
+                                            joystickTop.css('height', (100-joy1_vertical)+"%");
+                                        }
+                                    }
+                                    else{
+                                        joy1_horizontal = convertHexa(joy1_horizontal);
+                                        if(joy1_horizontal<0){
+                                            joystickLeft.css('width', (100+joy1_horizontal)+"%");
+                                        }else{
+                                            joystickRight.css('width', joy1_horizontal+"%");
+                                        }
+                                    }
+                                }
+                                
+                                if(joy2_vertical !== '00' || joy2_horizontal !== '00'){
+                                    canvasJaugeInge.removeClass("zero_state");
+                                    if(joy2_vertical !== '00'){
+                                        joy2_vertical = convertHexa(joy2_vertical);
+                                        if(joy2_vertical<0){
+                                            joystickBot2.css('height', (joy2_vertical*-1)+"%");                                 
+                                        }else{
+                                            joystickTop2.css('height', (100-joy2_vertical)+"%");
+                                        }
+                                    }
+                                    else{
+                                        joy2_horizontal = convertHexa(joy2_horizontal);
+                                        if(joy2_horizontal<0){
+                                            joystickLeft2.css('width', (100+joy2_horizontal)+"%");
+                                        }else{
+                                            joystickRight2.css('width', joy2_horizontal+"%");
+                                        }
+                                    }
+                                }
+                                
+                                if(joy3_vertical !== '00' || joy3_horizontal !== '00'){
+                                    canvasJaugeInge.removeClass("zero_state");
+                                    if(joy3_vertical !== '00'){
+                                        joy3_vertical = convertHexa(joy3_vertical);
+                                        if(joy3_vertical<0){
+                                            joystickBot3.css('height', (joy3_vertical*-1)+"%");                                 
+                                        }else{
+                                            joystickTop3.css('height', (100-joy3_vertical)+"%");
+                                        }
+                                    }
+                                    else{
+                                        joy3_horizontal = convertHexa(joy3_horizontal);
+                                        if(joy3_horizontal<0){
+                                            joystickLeft3.css('width', (100+joy3_horizontal)+"%");
+                                        }else{
+                                            joystickRight3.css('width', joy3_horizontal+"%");
+                                        }
+                                    }
+                                }                      
+                                                                
+                                break;
+                            default:
+                                //console.log("non indentifié");
+                        }
+                    }
+                }
                 break;
         }         
         
@@ -1958,6 +2098,22 @@ $(document).ready(function(){
         alert("mode TEST activated");
     });
     
+    //switch de panel sur la toolbox ingé
+    $("#content_toolbox .show_joystick").on('click', function(){
+        $("#content_toolbox .diag_inge .button_show").fadeOut(300);
+        setTimeout(function(){
+            $("#content_toolbox .diag_inge .joystick_show").fadeIn(300);
+        },300);
+        
+    });
+    $("#content_toolbox .show_button").on('click', function(){
+        $("#content_toolbox .diag_inge .joystick_show").fadeOut(300);
+        setTimeout(function(){
+            $("#content_toolbox .diag_inge .button_show").fadeIn(300);
+        },300);
+//        $("#content_toolbox .diag_inge .joystick_show").addClass("hidden");
+//        $("#content_toolbox .diag_inge .button_show").removeClass("hidden");
+    });
     
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

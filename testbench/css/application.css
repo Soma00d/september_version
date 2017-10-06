@@ -1676,6 +1676,496 @@ and open the template in the editor.
   width: 82px;
 }
 
+/* line 228, ../sass/_toolbox.scss */
+.diag_inge {
+  position: relative;
+  margin-top: 40px;
+}
+/* line 231, ../sass/_toolbox.scss */
+.diag_inge .zone {
+  border: 3px solid #3b73b9;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+}
+/* line 237, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component {
+  width: 355px;
+}
+/* line 239, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component.is_pressed img {
+  border: 4px solid #a3ec6d;
+}
+/* line 244, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component .info_component {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+/* line 248, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component .info_component .symbol {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  width: 40px;
+}
+/* line 254, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component .info_component .type {
+  display: inline-block;
+  vertical-align: middle;
+  width: 55px;
+  font-style: italic;
+}
+/* line 260, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component .info_component .descri {
+  display: inline-block;
+  vertical-align: middle;
+  width: 95px;
+}
+/* line 265, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component .info_component .press {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+}
+/* line 270, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component .info_component .rel {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 275, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component .photo_piece {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 279, ../sass/_toolbox.scss */
+.diag_inge .zone .diag_component img {
+  border-radius: 70px;
+  width: 70px;
+  height: 40px;
+}
+/* line 285, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_0 {
+  top: 0;
+  left: 0;
+}
+/* line 289, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_1 {
+  top: 269px;
+  left: 0;
+  width: 986px;
+  text-align: center;
+  width: 715px;
+  margin: auto;
+  right: 0;
+}
+/* line 297, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_1 .diag_component {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+/* line 303, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_2 {
+  top: 0;
+  right: 0;
+  min-height: 220px;
+}
+/* line 308, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_3 {
+  top: 93px;
+  left: 0;
+  width: 986px;
+  width: 715px;
+  margin: auto;
+  right: -320px;
+}
+/* line 315, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_3 .diag_component {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+/* line 321, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_4 {
+  top: 370px;
+  left: 0;
+  width: 986px;
+  text-align: center;
+  width: 715px;
+  margin: auto;
+  right: -320px;
+}
+/* line 329, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_4 .diag_component {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+/* line 335, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_5 {
+  top: 657px;
+  left: 0;
+  width: 986px;
+  text-align: center;
+  width: 715px;
+  margin: auto;
+  right: -320px;
+}
+/* line 343, ../sass/_toolbox.scss */
+.diag_inge .zone.zone_5 .diag_component {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+/* line 350, ../sass/_toolbox.scss */
+.diag_inge .get_config {
+  text-align: center;
+  background: #f2f2f2;
+  padding: 10px;
+  width: 183px;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: inline-block;
+  vertical-align: top;
+  height: 128px;
+  position: absolute;
+  left: 398px;
+  top: 83px;
+}
+/* line 363, ../sass/_toolbox.scss */
+.diag_inge .get_config .bt_get_config {
+  margin-bottom: 10px;
+}
+/* line 366, ../sass/_toolbox.scss */
+.diag_inge .get_config .config_info {
+  text-align: left;
+}
+/* line 368, ../sass/_toolbox.scss */
+.diag_inge .get_config .config_info .text_config {
+  font-weight: bold;
+}
+/* line 373, ../sass/_toolbox.scss */
+.diag_inge .show_joystick {
+  text-align: center;
+  background: #3b73b9;
+  padding: 10px;
+  color: white;
+  width: 183px;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+}
+/* line 389, ../sass/_toolbox.scss */
+.diag_inge .show_button {
+  text-align: center;
+  background: #3b73b9;
+  padding: 10px;
+  color: white;
+  width: 183px;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+}
+/* line 406, ../sass/_toolbox.scss */
+.diag_inge .joystick_show {
+  display: none;
+  min-height: 930px;
+}
+/* line 409, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .informations {
+  width: 100px;
+  margin-bottom: 10px;
+  height: 15px;
+  margin-top: 15px;
+}
+/* line 414, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .informations .zero {
+  float: left;
+}
+/* line 418, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .informations .cent {
+  float: right;
+}
+/* line 422, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .jauge_container_global {
+  text-align: center;
+  top: 50px;
+  position: absolute;
+}
+/* line 427, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge {
+  position: relative;
+  width: 177px;
+  height: 278px;
+}
+/* line 431, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge .title_jauge {
+  font-weight: bold;
+  font-size: 13px;
+}
+/* line 436, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left {
+  position: absolute;
+  left: 0px;
+  top: 90px;
+}
+/* line 440, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left .jauge_container {
+  width: 75px;
+  height: 22.5px;
+  border: 1px solid black;
+  background: yellowgreen;
+  box-shadow: -2px 0px 5px 0px grey;
+}
+/* line 447, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left .jauge_remplissage {
+  width: 100%;
+  height: 22.5px;
+  background: white;
+}
+/* line 453, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right {
+  position: absolute;
+  left: 99px;
+  top: 90px;
+}
+/* line 457, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right .jauge_container {
+  width: 75px;
+  height: 22.5px;
+  border: 1px solid black;
+  background: white;
+  box-shadow: 2px 0px 5px 0px grey;
+}
+/* line 464, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right .jauge_remplissage {
+  width: 0%;
+  height: 22.5px;
+  background: yellowgreen;
+}
+/* line 470, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top {
+  position: absolute;
+  left: 75.75px;
+}
+/* line 473, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top .jauge_container {
+  height: 75px;
+  width: 22.5px;
+  border: 1px solid black;
+  background: yellowgreen;
+  box-shadow: 0px -2px 5px 0px grey;
+}
+/* line 480, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top .jauge_remplissage {
+  height: 100%;
+  width: 22.5px;
+  background: white;
+}
+/* line 486, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot {
+  position: absolute;
+  left: 75.75px;
+  top: 152.25px;
+}
+/* line 490, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot .jauge_container {
+  height: 75px;
+  width: 22.5px;
+  border: 1px solid black;
+  background: white;
+  box-shadow: 0px 2px 5px 0px grey;
+}
+/* line 497, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot .jauge_remplissage {
+  height: 0%;
+  width: 22.5px;
+  background: yellowgreen;
+}
+/* line 502, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot .informations {
+  margin-top: 6px;
+}
+/* line 508, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left_2 {
+  position: absolute;
+  left: 0px;
+  top: 90px;
+}
+/* line 512, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left_2 .jauge_container {
+  width: 75px;
+  height: 22.5px;
+  border: 1px solid black;
+  background: yellowgreen;
+  box-shadow: -2px 0px 5px 0px grey;
+}
+/* line 519, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left_2 .jauge_remplissage {
+  width: 100%;
+  height: 22.5px;
+  background: white;
+}
+/* line 525, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right_2 {
+  position: absolute;
+  left: 99px;
+  top: 90px;
+}
+/* line 529, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right_2 .jauge_container {
+  width: 75px;
+  height: 22.5px;
+  border: 1px solid black;
+  background: white;
+  box-shadow: 2px 0px 5px 0px grey;
+}
+/* line 536, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right_2 .jauge_remplissage {
+  width: 0%;
+  height: 22.5px;
+  background: yellowgreen;
+}
+/* line 542, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top_2 {
+  position: absolute;
+  left: 75.75px;
+}
+/* line 545, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top_2 .jauge_container {
+  height: 75px;
+  width: 22.5px;
+  border: 1px solid black;
+  background: yellowgreen;
+  box-shadow: 0px -2px 5px 0px grey;
+}
+/* line 552, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top_2 .jauge_remplissage {
+  height: 100%;
+  width: 22.5px;
+  background: white;
+}
+/* line 558, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_2 {
+  position: absolute;
+  left: 75.75px;
+  top: 152.25px;
+}
+/* line 562, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_2 .jauge_container {
+  height: 75px;
+  width: 22.5px;
+  border: 1px solid black;
+  background: white;
+  box-shadow: 0px 2px 5px 0px grey;
+}
+/* line 569, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_2 .jauge_remplissage {
+  height: 0%;
+  width: 22.5px;
+  background: yellowgreen;
+}
+/* line 574, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_2 .informations {
+  margin-top: 6px;
+}
+/* line 579, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left_3 {
+  position: absolute;
+  left: 0px;
+  top: 90px;
+}
+/* line 583, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left_3 .jauge_container {
+  width: 75px;
+  height: 22.5px;
+  border: 1px solid black;
+  background: yellowgreen;
+  box-shadow: -2px 0px 5px 0px grey;
+}
+/* line 590, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_left_3 .jauge_remplissage {
+  width: 100%;
+  height: 22.5px;
+  background: white;
+}
+/* line 596, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right_3 {
+  position: absolute;
+  left: 99px;
+  top: 90px;
+}
+/* line 600, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right_3 .jauge_container {
+  width: 75px;
+  height: 22.5px;
+  border: 1px solid black;
+  background: white;
+  box-shadow: 2px 0px 5px 0px grey;
+}
+/* line 607, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_horizontal_right_3 .jauge_remplissage {
+  width: 0%;
+  height: 22.5px;
+  background: yellowgreen;
+}
+/* line 613, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top_3 {
+  position: absolute;
+  left: 75.75px;
+}
+/* line 616, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top_3 .jauge_container {
+  height: 75px;
+  width: 22.5px;
+  border: 1px solid black;
+  background: yellowgreen;
+  box-shadow: 0px -2px 5px 0px grey;
+}
+/* line 623, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_top_3 .jauge_remplissage {
+  height: 100%;
+  width: 22.5px;
+  background: white;
+}
+/* line 629, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_3 {
+  position: absolute;
+  left: 75.75px;
+  top: 152.25px;
+}
+/* line 633, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_3 .jauge_container {
+  height: 75px;
+  width: 22.5px;
+  border: 1px solid black;
+  background: white;
+  box-shadow: 0px 2px 5px 0px grey;
+}
+/* line 640, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_3 .jauge_remplissage {
+  height: 0%;
+  width: 22.5px;
+  background: yellowgreen;
+}
+/* line 645, ../sass/_toolbox.scss */
+.diag_inge .joystick_show .canvas_jauge #jauge_joystick_vertical_bot_3 .informations {
+  margin-top: 6px;
+}
+
 /* line 2, ../sass/download.scss */
 #content_download .download_tool {
   text-align: center;
